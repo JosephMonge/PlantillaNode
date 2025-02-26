@@ -1,0 +1,86 @@
+{
+  "users": [],
+  "permisos": [
+    {
+      "id": "431f",
+      "idUsuario": "2",
+      "locationPC": "Desamparados",
+      "borrowDate": "2025-02-25",
+      "returnDate": "2025-02-26",
+      "computerId": "2",
+      "terms": "on"
+    },
+    {
+      "id": "89b2",
+      "idUsuario": ", xsm xs",
+      "locationPC": "Desamparados",
+      "borrowDate": "2025-02-14",
+      "returnDate": "2025-02-22",
+      "computerId": "11323",
+      "terms": "on"
+    },
+    {
+      "id": "716e",
+      "idUsuario": "dbcdmc",
+      "locationPC": "Puntarenas",
+      "borrowDate": "2025-02-19",
+      "returnDate": "2025-02-07",
+      "computerId": "1221121",
+      "terms": "on"
+    },
+    {
+      "id": "f119",
+      "idUsuario": "cj,c",
+      "locationPC": "Desamparados",
+      "borrowDate": "2025-02-14",
+      "returnDate": "2025-02-05",
+      "computerId": "212121",
+      "terms": "on"
+    },
+    {
+      "id": "8451",
+      "idUsuario": "wdwdw",
+      "locationPC": "Puntarenas",
+      "borrowDate": "2025-02-13",
+      "returnDate": "2025-02-16",
+      "computerId": "212112",
+      "terms": "on"
+    },
+    {
+      "id": "8b06",
+      "idUsuario": "",
+      "locationPC": "",
+      "borrowDate": "",
+      "returnDate": "",
+      "computerId": "",
+      "terms": "on"
+    },
+    {
+      "id": "dad9",
+      "idUsuario": "",
+      "locationPC": "",
+      "borrowDate": "",
+      "returnDate": "",
+      "computerId": "222",
+      "terms": "on"
+    },
+    {
+      "id": "3640",
+      "idUsuario": "3333",
+      "locationPC": "Desamparados",
+      "borrowDate": "2025-01-30",
+      "returnDate": "2025-01-31",
+      "computerId": "222",
+      "terms": "on"
+    },
+    {
+      "id": "e603",
+      "idUsuario": "3333",
+      "locationPC": "Desamparados",
+      "borrowDate": "2025-01-30",
+      "returnDate": "2025-01-31",
+      "computerId": "222",
+      "terms": "on"
+    }
+  ]
+}
