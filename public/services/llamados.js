@@ -58,9 +58,6 @@ async function updateUsers(logInUser, logInPassword)
         };
 
 
-        
-
-
         const response = await fetch("http://localhost:3001/users/"+id, {
             method: 'PUT',
             headers: {
@@ -79,10 +76,33 @@ async function updateUsers(logInUser, logInPassword)
 
 export{updateUsers}
 
+////////LLAMADO PATCH//////////////
+
+async function patchData(estado,endpoint,id) 
+{
+    try {
+        const response = await fetch(`http://localhost:3001/${endpoint}/${id}/`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type':'application/json'
+            },
+            body: JSON.stringify({estado})
+        });
+        const data = await response.json()
+        console.log(data);
+        return data
+    } catch (error) {
+        console.error('Error update user:', error);
+        throw error;
+    }
+}
+
+export{patchData}
+
+
 
 
 //////////////LLAMADO DELETE/////////////
-
 
 async function deleteUser(id) {
     try {

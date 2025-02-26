@@ -1,4 +1,4 @@
-import { getUsers, postUsers} from "./services/llamados.js"
+import { getUsers, patchData, postUsers} from "./services/llamados.js"
 
 const userID = document.getElementById("userID")
 const location = document.getElementById("location")
@@ -8,6 +8,8 @@ const computerID = document.getElementById("computerID")
 const terms = document.getElementById("terms")
 const addBtn = document.getElementById("addBtn")
 const listaPrestamos = document.getElementById("listaPrestamos")
+const acceptedContainer = document.getElementById("acceptedContainer")
+const rejectedContainer = document.getElementById("rejectedContainer")
 
 addBtn.addEventListener("click", async function (e) {
     e.preventDefault()
@@ -17,50 +19,69 @@ addBtn.addEventListener("click", async function (e) {
         "borrowDate": borrowDate.value,
         "returnDate": returnDate.value,
         "computerId": computerID.value,
-        "terms": terms.value
+        "terms": terms.value,
+        "estado": false
     }
     await postUsers(permiso,"permisos")
 })
-
-async function showPermits() {
+//Para seleccionar la lista de Aceptados y rechazados
+    async function showPermits() {
     const permits = await getUsers("permisos")
+    const listaAceptados = permits.filter(permiso=>permiso.estado === true)
+    console.log(listaAceptados);
+    //PRUEBA///////////HACER FOR EACH
+    permits.forEach( (estado) => { 
+        const listaAceptados = document.createElement(div)
+        
+    });
+
+
 
     for (let index = 0; index < permits.length; index++) {
 
-        //let idUsuario = document.createElement("p")
+        let table = document.createElement("table")
+        let thIdUsuario = document.createElement("tr")
+        let thlocationPC = document.createElement("tr")
+        let thborrowDate = document.createElement("tr")
+        let threturnDate = document.createElement("tr")
+        let thcomputerId = document.createElement("tr")
+        let thterms = document.createElement("tr")
+        
+        thIdUsuario.textContent = permits[index].idUsuario
+        thlocationPC.textContent = permits[index].locationPC
+        thborrowDate.textContent = permits[index].borrowDate
+        threturnDate.textContent = permits[index].returnDate
+        thcomputerId.textContent = permits[index].computerId
+        thterms.textContent = permits[index].terms
 
-        //idUsuario.textContent = permits[index].idUsuario
+        table.appendChild(thIdUsuario)
+        table.appendChild(thlocationPC)
+        table.appendChild(thborrowDate)
+        table.appendChild(threturnDate)
+        table.appendChild(thcomputerId)
+        table.appendChild(thterms)
 
-
-        let p = document.createElement("p")
-
-        p.textContent = permits[index].idUsuario,
-                        permits[index].locationPC,
-                        permits[index].borrowDate, 
-                        permits[index].returnDate,
-                        permits[index].computerId,
-                        permits[index].terms
+        listaPrestamos.appendChild(table)
 
         const rejectBtn = document.createElement("button")
         rejectBtn.textContent = "REJECT"
         const acceptBtn = document.createElement("button")
         acceptBtn.textContent = "ACCEPT"
 
-        rejectBtn.addEventListener("click", function(){
+        table.appendChild(rejectBtn)
+        table.appendChild(acceptBtn)
 
-    
+        rejectBtn.addEventListener("click", async function(){
+            await patchData(
+                false,"permisos",permits[index].id
+            )
+
         })
-
-        acceptBtn.addEventListener("click", function(){
-
+        acceptBtn.addEventListener("click", async function(){
+            await patchData(
+                true,"permisos",permits[index].id
+            )
+        })
         
-        })
-        listaPrestamos.appendChild(p)
-
-    }
-}
+    }}
 showPermits()
-
-
-
-
