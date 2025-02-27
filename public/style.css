@@ -43,6 +43,8 @@ body {
     max-width: 200px;
     margin-top: 15px;
     border-radius: 10px;
+    border: solid;
+    border-color: goldenrod;
 }
 
 

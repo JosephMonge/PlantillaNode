@@ -29,13 +29,22 @@ addBtn.addEventListener("click", async function (e) {
     const permits = await getUsers("permisos")
     const listaAceptados = permits.filter(permiso=>permiso.estado === true)
     console.log(listaAceptados);
-    //PRUEBA///////////HACER FOR EACH
+    //PRUEBA///////////
     permits.forEach( (estado) => { 
         const listaAceptados = document.createElement(div)
-        
+        estado.add(listaAceptados)
     });
 
+    const permits = await getUsers("permisos")
+    const rejectedList = permits.filter(permiso=>permiso.estado === false)
+    console.log(rejectedList);
+    
+    permits.forEach( (estado) => { 
+        const rejectedList = document.createElement(div)
+        estado.add(rejectedList)
+    });
 
+    
 
     for (let index = 0; index < permits.length; index++) {
 

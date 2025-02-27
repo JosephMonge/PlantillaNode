@@ -19,11 +19,21 @@ logInBtn.addEventListener("click", function(){
     const logInPassword = document.getElementById("logInPassword").value;
 
     if (users[logInUser] && users [logInUser] === logInPassword) {
-        alert("You've successfully logged in")
-        window.location.href = "inicio.html";              
+        Swal.fire({
+            icon: "success",
+            title: "Logged In",
+            text: "You've succesfully logged in!",
+          });
+          setTimeout(() => {
+            window.location.href = "inicio.html";              
+          }, 2000);
     }
     else{
-        alert("ERROR!");
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+          });
     }
 })
 
