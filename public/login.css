@@ -1,3 +1,8 @@
+body {
+    background-color: rgb(65, 171, 171);
+
+}
+
 .logInContainer {
     background-color: rgb(8, 118, 118);
     text-align: center;
@@ -5,5 +10,17 @@
     color: goldenrod;
     max-width: 400px;
     position: relative;left: 370px;
+    border-radius: 20px;
 }
 
+#logInBtn {
+    cursor: pointer;
+    background-color: rgb(50, 160, 160);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#logInBtn:hover {
+    background-color: rgb(41, 137, 137);
+}

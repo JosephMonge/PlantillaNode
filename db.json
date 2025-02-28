@@ -1,5 +1,20 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id": "718c",
+      "username": "Mario",
+      "pass": "mario123",
+      "email": "mario@gmail.com",
+      "type": "Admin"
+    },
+    {
+      "id": "a188",
+      "username": "Emmanuel",
+      "pass": "emma123",
+      "email": "emma@gmail.com",
+      "type": "student"
+    }
+  ],
   "permisos": [
     {
       "id": "431f",
@@ -48,6 +63,16 @@
       "borrowDate": "2025-01-30",
       "returnDate": "2025-01-31",
       "computerId": "222",
+      "terms": "on",
+      "estado": false
+    },
+    {
+      "id": "faee",
+      "idUsuario": "Joseph123",
+      "locationPC": "Desamparados",
+      "borrowDate": "2025-02-28",
+      "returnDate": "2025-03-07",
+      "computerId": "12345",
       "terms": "on",
       "estado": false
     }

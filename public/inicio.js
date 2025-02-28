@@ -49,7 +49,7 @@ addBtn.addEventListener("click", async function (e) {
         locationPC.textContent = permit.locationPC
         borrowDate.textContent = permit.borrowDate
         returnDate.textContent = permit.returnDate
-        computerId.textContent = permit.computerID
+        computerId.textContent = permit.computerId
         terms.textContent = permit.terms
         estado.textContent = permit.estado
         
@@ -100,7 +100,7 @@ addBtn.addEventListener("click", async function (e) {
         borrowDate.textContent = permit.borrowDate
         returnDate.textContent = permit.returnDate
         computerId.textContent = permit.computerId
-        terms.textContent = permit.estado
+        terms.textContent = permit.terms
         estado.textContent = permit.estado
 
         listaUlAceptados.appendChild(liUsuario)
@@ -112,7 +112,7 @@ addBtn.addEventListener("click", async function (e) {
         listaUlAceptados.appendChild(estado)
 
         acceptedContainer.appendChild(listaUlAceptados)
-
+        
 
         const btnReject = document.createElement("button")
         btnReject.textContent = "Reject"

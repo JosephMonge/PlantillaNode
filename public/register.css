@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(96, 82, 64);
+
+}
+.registerContainer {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(114, 114, 128);
+    max-width: 300px;
+    text-align: center;    
+    position: relative; left: 420px;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.registerBars {
+    border: 1.7px solid;
+    color: rgb(217, 184, 0)
+}
+
+#register {
+    background-color: rgb(217, 184, 0) ;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+#register:hover {
+    background-color: rgb(168, 148, 32) ;
+}

@@ -35,7 +35,6 @@ async function showPermits() {
                         permits[index].terms
 
         acceptBtn.addEventListener("click", function(){
-
         
         })
         listaPrestamos.appendChild(p)
