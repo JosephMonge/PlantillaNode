@@ -9,18 +9,26 @@ logInBtn.addEventListener("click", async function() {
     for (let index = 0; index < usuariosRegistrados.length; index++) {
 
         if (logInUser.value === usuariosRegistrados[index].username && logInPassword.value === usuariosRegistrados[index].pass && usuariosRegistrados[index].type==="Admin"){
-           
-     
+            Swal.fire({
+                icon: "success",
+                title: "Logged In",
+                text: "You've succesfully logged in!",
+              });
+              setTimeout(() => {
             window.location.href="inicio.html";
-
+            }, 2000);   
 
         }
 
         if (logInUser.value === usuariosRegistrados[index].username && logInPassword.value === usuariosRegistrados[index].pass && usuariosRegistrados[index].type==="student"){
-           
-     
+            Swal.fire({
+                icon: "success",
+                title: "Logged In",
+                text: "You've succesfully logged in!",
+              });
+              setTimeout(() => {
             window.location.href="students.html";
-
+            }, 2000);   
         }
     }    
 })

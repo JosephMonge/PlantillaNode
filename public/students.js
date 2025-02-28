@@ -1,3 +1,4 @@
+import { postUsers } from "./services/llamados.js"
 const userID = document.getElementById("userID")
 const location = document.getElementById("location")
 const borrowDate = document.getElementById("borrowDate")
@@ -14,31 +15,8 @@ addBtn.addEventListener("click", async function (e) {
         "borrowDate": borrowDate.value,
         "returnDate": returnDate.value,
         "computerId": computerID.value,
-        "terms": terms.value
+        "terms": terms.value,
+        "estado": false
     }
-    await postUsers(permiso,"permisos")
+    await postUsers(permiso, "permisos")
 })
-
-async function showPermits() {
-    const permits = await getUsers("permisos")
-
-    for (let index = 0; index < permits.length; index++) {
-        
-
-        let p = document.createElement("p")
-
-        p.textContent = permits[index].idUsuario,
-                        permits[index].locationPC,
-                        permits[index].borrowDate, 
-                        permits[index].returnDate,
-                        permits[index].computerId,
-                        permits[index].terms
-
-        acceptBtn.addEventListener("click", function(){
-        
-        })
-        listaPrestamos.appendChild(p)
-
-    }
-}
-showPermits()

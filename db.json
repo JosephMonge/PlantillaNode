@@ -75,6 +75,16 @@
       "computerId": "12345",
       "terms": "on",
       "estado": false
+    },
+    {
+      "id": "4953",
+      "idUsuario": "Jeanca",
+      "locationPC": "Desamparados",
+      "borrowDate": "2025-02-08",
+      "returnDate": "2025-02-20",
+      "computerId": "777",
+      "terms": "on",
+      "estado": false
     }
   ]
 }
