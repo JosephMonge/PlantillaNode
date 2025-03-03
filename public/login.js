@@ -17,7 +17,6 @@ logInBtn.addEventListener("click", async function() {
               setTimeout(() => {
             window.location.href="inicio.html";
             }, 2000);   
-
         }
 
         if (logInUser.value === usuariosRegistrados[index].username && logInPassword.value === usuariosRegistrados[index].pass && usuariosRegistrados[index].type==="student"){

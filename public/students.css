@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(76, 127, 204);
+    background-color: rgb(160, 189, 231);
 }
 
 .titleHome {
@@ -8,6 +8,7 @@ body {
     padding: 20px;
     margin-top: 0%;
     border: solid;
+    text-shadow: 2PX 2PX 10px white;
 }
 
 .mainContainer {
@@ -18,24 +19,64 @@ body {
     border: solid;
     background-color: rgb(67, 174, 207);
     font-family: Arial, Helvetica, sans-serif;
+    border: ridge;
+    border-width: 15px;
 }
 
 #addBtn {
     font-family: Arial, Helvetica, sans-serif;
-    color: blueviolet;
-    background-color: rgb(25, 75, 75);
+    color: rgb(57, 11, 100);
+    background-color: rgb(99, 119, 220); 
     cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    width: 40px;
 }
 
 #addBtn:hover {
-    background-color: goldenrod;
+    background-color: rgb(228, 196, 114);
 }
 
 .list-title {
     font-family: 'Times New Roman', Times, serif;
     color: rgb(114, 90, 29);
-
 }
+
+#userID {
+    background-color: rgb(160, 189, 231);
+    border: none;
+    border-radius: 5px;
+}
+
+#location {
+    background-color: rgb(160, 189, 231);
+    border-radius: 5px;
+    border: none;
+}
+
+#borrowDate {
+    background-color: rgb(160, 189, 231);
+    border: none;
+    border-radius: 5px;
+}
+
+#returnDate {
+    background-color: rgb(160, 189, 231);
+    border: none;
+    border-radius: 5px; 
+}
+
+#computerID {
+    background-color: rgb(160, 189, 231);
+    border: none;
+    border-radius: 5px;
+}
+
+#terms {
+    outline: 2px solid rgb(99, 119, 220); 
+}
+
 
 
 
